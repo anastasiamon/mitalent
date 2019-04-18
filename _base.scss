@@ -1,17 +1,16 @@
 .flex-container {
     display:flex;
     align-items: center;
-    position: absolute;
-  
-    
+     
            }
-header {
-        justify-content:space-between;
+header {        
         height: 32px;
         margin-top: 67px;
         width: 1920px;
-        
-        
+        position: fixed;
+        z-index: 10;
+        justify-content:space-between;
+                       
 
     .site-title {
         position: absolute;
@@ -29,13 +28,14 @@ header {
         @extend .nunito-extrabold;
         font-size: 14px;
         color:#1a1a1d;
+        text-decoration: unset;
         
         &:hover {
            color:rgba(26, 26, 29, 0.5);
         }
     }
     .search-controls {
-        position: sticky;
+
         margin-right: 66px;
     }
     
@@ -49,39 +49,59 @@ header {
         margin-right:46px;
         margin-left: 53px;
            }
-    .first-screen {
-              display: flex;
-         justify-content: flex-end;
-     background-color: #ffffff;
-        height: 1080px;
-        width: 1920;
-        position: absolute;
-        z-index: -3;      
-     
-    }     
-     .rectangle-with-background {
-        width: 481px;
-        height: 811px;
-        background-image: linear-gradient(225deg, #b4d3d3, #d9e7e7);
-        position: absolute;
-        z-index: -1;
-     }
-     .main-content {
-         width: 1841;
-         height: 839;
-         position: absolute;
-         z-index: -2;
-     }
-     .person-info {
-         padding: 540px 159px;
-         font-size: 101px;
-         position: absolute;
-     }
-     .slide-video{
-     width: 1320px;
-      height: 810px;
-      background-color: #e2e8e8;
-      padding: 270px 480px;
-}
+    footer {
+            height:230px;
+            width: 1920px;
+            display: flex;
+            justify-content: center;
+     .footer-info {
+         width: 1798px;
+         height:135px;
+         justify-content: space-between;   
+              }       
+     .right-part {
+            height: 100%;
+            
+            position:relative;
+            
+
+        }      
+       .newsletter {
+        font-size: 14px;
+        line-height: 2.14;
+        letter-spacing: 2.8px;
+        color:$primary-color;
+        text-transform: uppercase;
+       }   
+
+       .letter {
+       width: 20px;
+       height: 16px;
+       }     
+
+       .social-nets {
+           right:0;
+           bottom:0;
+           width:184px;
+           position: absolute;
+           justify-content: space-between;
+           .social-net {
+           cursor: pointer;
+           }
+       }
+
+       .left-part {
+           height:100%;
+           position: relative;
+           
+       }
+       .designed-by {
+           position: absolute;
+           bottom:0;
+           left:0;
+           width: 458px;
+           color: #77777e;
+           font-size: 15px;
+                 }
+         }
     
-     
