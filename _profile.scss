@@ -1,3 +1,6 @@
+body {
+    width:1920px;
+}
 .burgermenu {
     width: 20px;
     height: 14px;
@@ -10,7 +13,7 @@
 .first-screen {
     height:1080;    
     position: relative;
-    width:1920px;
+  
 
     .main-content{
         width: 1800px;
@@ -182,14 +185,14 @@
           } 
 
 .second-screen { 
-    height:1066;
-    width:1920px;
     
+        
     .profile-content {
     
     display:flex;
     justify-content: space-between;
     padding: 120px 112px 120px 120px;
+}
     
     .person-photo-container {              
         width: 649px;
@@ -211,20 +214,25 @@
         background-color:#fff;
     }
 
+    .text {
+        max-width:437px;
+    }
+
    
     .detailed-info-person {
-        width:840px;
+       width:50%;
        display: flex;
        justify-content: space-between;
+       
        
     }
     .links-info-person {
         width:437px;
         margin-top: 91px;
         font-size: 12px;
-         letter-spacing: 2.4px;
+        letter-spacing: 2.4px;
         text-transform:uppercase;
-       justify-content: space-between;           
+        justify-content: space-between;           
     
         
         .link-info-person {
@@ -245,7 +253,7 @@
                 height: 2px;
                 background-color:$primary-color;
                 display: inline-block;
-                top:25px;
+                bottom:-16px;
                 left:50%;
                 transform: translateX(-50%);
 
@@ -267,7 +275,7 @@
         }
             }
 }
-}
+
 .star {
     width: 22px;
     height: 22px;
@@ -275,42 +283,43 @@
 .person-awards{
     font-size: 16px;
     line-height: 2.5;
-    color: $primary-color;
-    
+    color: $primary-color;    
+ }
 
-}
 .head-info-person {
     font-size: 60px;
     line-height: 1.32;
     color: $primary-color
 }
-.head2-info-person {
+.breaf-info-person {
     font-size: 24px;
     line-height: 1.5;
     color:$primary-color;
-    width: 407px;
-    height: 56px;
-}
+
+    }
 
 .info-person-text-text {
-    width: 477px;
+    
     line-height: 1.88;
     color: #767679;
     font-size: 16px;
 }
 .third-screen {
-    width:1920px;
-    height: 1080px;
-}
-.press-related-content {
-    width: 1110px;
-    height: 1080px; 
-    margin-left:241px;
-}
+  
+  .press-related-container  {
+    display:flex;
+    justify-content:space-between;
+    padding: 0px 120px 0px 120px;
+    }
+    .press-related-content {
+    
+     padding:(185px 0px 237px 121px);
+     max-width: 571px;
+     
+    }
+
 .press-head {
-    position: relative;
-    width:465px;
-    margin-top:185px;
+    position: relative;    
     font-size: 59px;
     line-height: 1.32;
     color:$primary-color;
@@ -321,71 +330,93 @@
         height: 2px;
         background-color: $primary-color;
         display: inline-block;    
-        margin-top: 174px;        
+        bottom:-20px;        
        
         }
 
 }
-.news{
-    
-    margin-top:131px;
-    
 }
-.video1 {
-width: 200px;
-height: 139px;
-  background-color: $rectangle-color;
+.news{
+    display:flex;      
+    margin-top:131px;
+    flex-wrap:wrap;
+    margin-bottom:13px;
+    
 }
 
-.event {
-    margin-left: 42px;
-    width: 329px;
+.new {
+    margin-bottom:50px;
+    display:flex;
+    justify-content:space-between;
 }
-.description1 {
+.event {
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    width:329px;
+   
+  
+}
+.description {
     font-size: 24px;
     color:$primary-color;    
-  
+
+    &.active, &:hover {
+        color: #87bbbc;
+    }
     
 }
 
 .date {
-    margin-top:36px;
+    bottom:0px;
     font-size: 16px;
     color: #77777e;
 
 }
-.new2 {
-margin-top: 48px;
-}
-.description2 {
-    font-size: 24px;
-    color: #87bbbc;
-}  
-.video2 {
-  
-  width: 200px;
-  height: 139px;
-  background-color: #b4d3d3;
-  position:relative;
-  margin-bottom:63px;
-  i{
-      position: absolute;
-      left:50%;
-      top:50%;
-      transform:translate (-50%, -50%)
-  }
-}
+
+.video {
+    width: 200px;
+    height: 139px;
+    background-color: $rectangle-color;
+    margin-right:42px;
+    
+    i{
+        display:none;
+    }
+    
+      &.active,&:hover {
+        background-color: #b4d3d3;
+        position:relative;
+        
+        i{
+            display:unset;
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform:translate (-50%, -50%);
+            margin-left:-3px;
+            margin-top:-4px;
+            
+        }
+    
+      }
+    
+    }
+
 
 .link-explore-more {
-    
+  
     text-transform: uppercase;
+    bottom:0px;
+    
 }
 .big-photo {
 
     width: 839px;
     height: 1080px;
     background-color: #e2e8e8;
-    margin-right:120px;
+    
     
 }
 .play-icon {
@@ -396,8 +427,7 @@ margin-top: 48px;
 }
 
 .fourth-screen { 
- height:1036px;
- width:1920px;
+ 
   
 
 .about-clients {
@@ -412,16 +442,18 @@ margin-top: 48px;
     
 
 .clients-info {
-
-    justify-content: space-between;
-    
+  
+display:flex;    
+justify-content: space-between;    
 }
 
 .clients-info-head {
-    font-size: 60px;
-    line-height: 1.32;
+    font-size: 60px;    
     color:$primary-color;
     margin-left:122px;
+    position:relative;
+    
+
     &.active:before{
         content:'';
         position: absolute;
@@ -429,18 +461,23 @@ margin-top: 48px;
         height: 2px;
         background-color: $primary-color;
         display: inline-block;    
-        margin-top: 97px;
+        bottom:-20px;
     }
 }
 .some-description-text {
 width: 566px;
+height:100%;
 color: #767679;
 font-size: 16px;
-
+line-height: 1.88;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
 
 }
 .link-explore-more {
-    margin-top:41px;
+    
+ bottom:0;
 }
 
 .photo-container {    
@@ -448,36 +485,68 @@ font-size: 16px;
     
     
 }
-.first-photo {
+.photo-item {
     width: 420px;
     height: 490px;   
     background-color: #d3dcdc;
+    position:relative;
+    cursor:pointer;
+
+.photo-item-content {
+    
+    display:none;
 }
-.second-photo {
-    width: 420px;
-    height: 490px; 
-    background-color: $rectangle-color;
-}
-.third-photo {
-    width: 420px;
-    height: 490px;
-  background-color: #d3dcdc;
-  cursor:pointer;
+
   &.active, &:hover {
-   background-color: $primary-color;         
-    opacity: 1;}
 
+   background-color: $primary-color;         
+    opacity: 0,8;
+
+.photo-item-content {
+    height:100%;
+    width:100%;
+    display:unset;
+    color:white;  
+}
 
 }
-.fourth-photo{
-    width: 420px;
-    height: 490px;
-    background-color: $rectangle-color;
+
+.fa-external-link-square-alt {
+    right:0px;
+    top: 20px;
+    right: 20px;
+    position:absolute;
+    height:56px;
+    width:56px;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:$rectangle-color;
+    }
+.photo-item-text {
+    position:absolute;
+    bottom:51px;
+    left:50%;
+    transform:translateX(-50%);
+   
+}    
+
+.photo-item-name {
+ font-size:24px;
+ margin-bottom:19px;
+}
+
+.photo-item-job {
+ 
+text-transform: uppercase;
+font-size:12px;   
+text-align: center;
+}
        
 }
 .photo-slider{
-    
-        bottom:120px;
+    bottom:120px;
     }
 .photo-slide {
     background-color:  #d3dcdc;
